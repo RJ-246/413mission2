@@ -9,11 +9,13 @@ namespace Mission2
 			int[] rollResults = new int[rollNum];
 			int[] rollTotals = new int[11] {0,0,0,0,0,0,0,0,0,0,0};
 
+            // Rolls the dice the # of times input by the user
 			for (int i = 0; i < rollResults.Length; i++)
 			{
 				rollResults[i] = random.Next(2, 13);
 			}
 
+            // Goes through the dice rolls and counts each total into an array
 			for (int i=0; i < rollResults.Length; i++)
 			{
 				switch (rollResults[i])
@@ -54,13 +56,15 @@ namespace Mission2
                 }
 
             }
+
+            //Prints Info
             Console.WriteLine();
             Console.WriteLine("Dice Rolling Simulation Results");
             Console.WriteLine("Each '*' represensts 1% of the total number of rolls.");
             Console.WriteLine("Total Number of Rolls = " + rollNum + ".");
             Console.WriteLine();
 
-
+            // Creates asterisks for each 1% of total rolls and prints
             for (int i = 2; i < 13; i++)
                 {
                 string asterisks = "";
