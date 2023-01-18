@@ -6,7 +6,11 @@ namespace Mission2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SimulateRolls sr = new SimulateRolls();
+            Console.WriteLine("Welcome to the dice throwing simulator!");
+            Console.Write("How many dice rolls would you like to simulate? ");
+            short rolls = Convert.ToInt16(Console.ReadLine());
+            sr.RollDice(rolls);
         }
     }
 }
